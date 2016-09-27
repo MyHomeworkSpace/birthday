@@ -1,0 +1,52 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-bottom: 20px;
+  color: white;
+}
+
+.jumbotron {
+  height: 100vh
+}
+
+.background-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-header:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('https://raw.githubusercontent.com/MyHomeworkSpace/client/master/img/bg.jpeg');
+    display: block;
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.container {
+  padding-top: 20vh;
+  text-align: center;
+}
+
+.content-header {
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(0,0,0,0) !important;
+}
